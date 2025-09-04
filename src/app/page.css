@@ -1,0 +1,147 @@
+.title {
+    font-size: 2.1rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 750;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 17px;
+
+    margin-bottom: 13px;
+    margin-top: 20px;
+}
+
+.main-container p {
+    text-align: center;
+    color: rgb(104, 104, 104);
+    font-size: 1.2rem;
+
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+}
+
+
+
+
+.fontA{
+    width: 28px;
+    color: rgb(1, 169, 108);
+}
+
+.side-bar{
+    background-color: #f5f5f5;
+    display: flex;
+    width: min-content;
+    padding: 30px;
+    border-radius: 15px;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.side-bar h3{
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    
+}
+
+.main{
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bar-title{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-bar .fontA{
+    width: 20px;
+    height: auto;
+    display: flex;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    gap: 7px;
+
+    background-color: rgb(1, 169, 108);
+
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.button p {
+    color:white;
+    font-size: 1rem;
+}
+
+.state-label{
+    background-color: rgb(1, 169, 108);
+    display: flex;
+    width: min-content;
+    padding: 3px 5px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+.information{
+    border-top: 1px solid rgb(172, 172, 172);
+    padding-top: 10px;
+}
+
+.information p{
+    text-align: start;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.camera{
+    background-color: #f5f5f5;
+    width: 70%;
+    padding: 20px 30px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.camera h3{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.camera-content{
+    
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.camera-content .fontA{
+    width: min-content;
+}
+
