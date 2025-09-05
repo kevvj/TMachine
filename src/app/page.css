@@ -81,6 +81,7 @@
     cursor: pointer;
 }
 
+
 .button p {
     color:white;
     font-size: 1rem;
@@ -88,8 +89,7 @@
 
 .state-label{
     background-color: rgb(1, 169, 108);
-    display: flex;
-    width: min-content;
+    display: fit-content;
     padding: 3px 5px;
     color: white;
     border-radius: 5px;
@@ -138,4 +138,20 @@
 .camera-content .fontA{
     width: min-content;
 }
+
+
+#webcam-container {
+    width: 800px;     /* tamaño del contenedor */
+    height: 500px;    /* puedes cambiarlo según quieras */
+    border: 2px solid rgb(103, 103, 103);
+    border-radius: 12px;
+    overflow: hidden; /* evita que sobresalga */
+  }
+  
+  #webcam-container canvas {
+    width: 100%;      /* el canvas se ajusta al contenedor */
+    height: 100%;
+    object-fit: cover;
+  }
+  
 
