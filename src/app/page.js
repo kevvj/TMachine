@@ -40,7 +40,7 @@ const Main = () => {
   const URL = "https://teachablemachine.withgoogle.com/models/iJTFhiE7a/"
 
   async function init() {
-    if (ready) return
+    if (ready) setReady(false)
     const tmImage = await import("@teachablemachine/image")
     await import("@tensorflow/tfjs")
     const modelURL = URL + "model.json"
