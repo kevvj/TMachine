@@ -7,17 +7,26 @@ import { useRef, useState, useEffect } from "react"
 const Main = () => {
 
   const [state, setState] = useState(false)
-  const [object, setObject] = useState('...')
+  const [object, setObject] = useState('')
 
   const [predictions, setPredictions] = useState([])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      console.log("hola")
-    }, 2000)
 
-    return () => clearInterval(interval) // limpieza al desmontar
-  }, [])
+    const most = () => {
+
+      if (predictions.length === 0) return
+
+      const best = predictions.reduce((a, b) =>
+        a.probability > b.probability ? a : b
+      )
+
+      setObject(best.className)
+    }
+
+    most()
+
+  }, [predictions])
 
   //asdasdasd
 
@@ -103,13 +112,13 @@ const Main = () => {
           </div>
 
           <div className="state">
-            <h3 onClick = {() => console.log(predictions)}>Estado:</h3>
-            <div className="state-label">{state ? "Activo":"Inactivo"}</div>
+            <h3 onClick={() => console.log(predictions)}>Estado:</h3>
+            <div className="state-label">{state ? "Activo" : "Inactivo"}</div>
           </div>
 
           <div className="state">
             <h3>Objeto:</h3>
-            <div className="state-label">{predictions.length !== 0 ? predictions[3].className :"asd asdasd asdasdasdas asdasdasd"}</div>
+            <div className="state-label">{object}</div>
           </div>
 
           <div className="information">
@@ -120,17 +129,17 @@ const Main = () => {
         </div>
 
         <div className="camera">
-          <h3 style={{display:state ? "none":"flex"}}>Feed de cámara en Vivo</h3>
-          <div className="camera-content" style={{display:state ? "none":"flex"}}>
+          <h3 style={{ display: state ? "none" : "flex" }}>Feed de cámara en Vivo</h3>
+          <div className="camera-content" style={{ display: state ? "none" : "flex" }}>
             <div className="fontA"><FontAwesomeIcon icon={faCamera} color="black" size="5x"></FontAwesomeIcon></div>
             Haz clic en "Iniciar Cámara" para comenzar
           </div>
-          <div style={{display:state ? "block":"none"}} ref={webcamContainerRef} id="webcam-container" />
+          <div style={{ display: state ? "block" : "none" }} ref={webcamContainerRef} id="webcam-container" />
         </div>
 
       </div>
 
-      
+
       <div ref={labelContainerRef} id="label-container" />
     </div>
   )
