@@ -138,9 +138,6 @@ const Main = () => {
         </div>
 
       </div>
-
-
-      <div ref={labelContainerRef} id="label-container" />
     </div>
   )
 }
