@@ -39,7 +39,7 @@ https://github.com/kevvj/TMachine
    ```
 4. Abrir en el navegador:
    ```
-   http://localhost:30000
+   http://localhost:3000
    ```
 5. Hacer clic en "Iniciar cámara" y mostrar un objeto frente a la cámara para probar la detección.
 
